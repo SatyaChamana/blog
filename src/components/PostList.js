@@ -8,6 +8,8 @@ import UserHeader from './UserHeader';
 
     componentDidMount = () => {
         this.props.fetchPostsAndUser();
+        console.log(props);
+        
     }
 
     renderList() {
