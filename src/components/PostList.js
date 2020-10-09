@@ -7,12 +7,13 @@ import UserHeader from './UserHeader';
  class PostList extends React.Component{
 
     componentDidMount = () => {
+        console.log("4");
         this.props.fetchPostsAndUser();
-        console.log(props);
         
     }
 
     renderList() {
+        console.log("3");
         return this.props.posts.map(post => {
             return(
                 <div className="item" key={post.id}>
@@ -29,12 +30,14 @@ import UserHeader from './UserHeader';
         })
     }
     render(){
+        console.log("1");
         console.log(this.props.posts);
         return <div className="ui relaxed divided list">{this.renderList()}</div>
     }
 }
 
 const mapStateToProps = state => {
+    console.log("2");
     return {
         posts: state.posts
     };
